@@ -8,7 +8,7 @@ class WebRequestHandler(BaseHTTPRequestHandler):
     def querydata(self):
         return dict(parse_qsl(self.url().query))
 
-    def do_GET(self):  # Corrección aquí: do_GET
+    def do_GET(self):
         if self.path == '/favicon.ico':
             self.send_response(204)
             self.end_headers()
